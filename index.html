@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex</title>
+ 
+  <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="pokedex-container">
+    <div class="pokedex-header">
+      <h1 class="pokedex-title">Charlie's Pokédex</h1>
+    </div>
+
+  
+    <div class="search-section">
+      <input type="text" id="search-input" placeholder="Enter Pokémon name or ID">
+      <button id="search-button">Search</button>
+    </div>
+
+   
+    <div class="pokemon-info">
+      <div class="pokemon-data">
+        <p id="pokemon-name" class="info-text">Name: </p>
+        <p id="pokemon-id" class="info-text">ID: </p>
+        <p id="weight" class="info-text">Weight: </p>
+        <p id="height" class="info-text">Height: </p>
+        <div id="types" class="info-text"></div>
+        <p id="hp" class="info-text">HP: </p>
+        <p id="attack" class="info-text">Attack: </p>
+        <p id="defense" class="info-text">Defense: </p>
+        <p id="special-attack" class="info-text">Special Attack: </p>
+        <p id="special-defense" class="info-text">Special Defense: </p>
+        <p id="speed" class="info-text">Speed: </p>
+      </div>
+
+      
+      <div id="pokemon-sprite" class="sprite-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
