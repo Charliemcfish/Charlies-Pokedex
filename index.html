@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pokédex</title>
+  <title>Charlie's Pokédex</title>
  
   <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
-  
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="pokeball.png">
 </head>
 <body>
   <div class="pokedex-container">
@@ -15,20 +15,22 @@
       <h1 class="pokedex-title">Charlie's Pokédex</h1>
     </div>
 
-  
     <div class="search-section">
       <input type="text" id="search-input" placeholder="Enter Pokémon name or ID">
       <button id="search-button">Search</button>
     </div>
 
-   
-    <div class="pokemon-info">
-      <div class="pokemon-data">
+    <!-- Pokemon info divided into two sections -->
+    <div class="pokemon-info" id="pokemon-info">
+      <img src="pokeball.png" alt="Pokeball" id="pokeball" class="pokeball">
+      
+      <!-- Left section for pokemon data -->
+      <div class="pokemon-data" id="pokemon-data">
         <p id="pokemon-name" class="info-text">Name: </p>
         <p id="pokemon-id" class="info-text">ID: </p>
+        <div id="types" class="info-text"></div>
         <p id="weight" class="info-text">Weight: </p>
         <p id="height" class="info-text">Height: </p>
-        <div id="types" class="info-text"></div>
         <p id="hp" class="info-text">HP: </p>
         <p id="attack" class="info-text">Attack: </p>
         <p id="defense" class="info-text">Defense: </p>
@@ -37,7 +39,7 @@
         <p id="speed" class="info-text">Speed: </p>
       </div>
 
-      
+      <!-- Right section for the pokemon sprite -->
       <div id="pokemon-sprite" class="sprite-container"></div>
     </div>
   </div>
