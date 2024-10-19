@@ -33,6 +33,15 @@ document.getElementById("pokemon-name").innerText = pokemon.name.toUpperCase();
 document.getElementById("pokemon-id").innerText = `#${pokemon.id}`;
 
 
+const isShiny = Math.random() < 0.1;
+
+if (isShiny) {
+  document.getElementById("pokemon-sprite").innerHTML = `<img src="${pokemon.sprites.front_shiny}" alt="Shiny ${pokemon.name}">`;
+  document.body.style.backgroundColor = "gold";
+  document.querySelector(".pokedex-title").innerText = "You've found a shiny!";
+} else {
+
+
 //Loop to assign background colour to each pokemon type
 pokemon.types.forEach(typeInfo => {
   const typeName = typeInfo.type.name;
@@ -62,6 +71,9 @@ spriteContainer.innerHTML = `<img src="${pokemon.sprites.front_default}" alt="${
 
 const primaryType = pokemon.types[0].type.name;
 document.body.style.backgroundColor = typeColors[primaryType];
+
+document.querySelector(".pokedex-title").innerText = "Charlie's Pokédex";
+}
 }
 
 //Display data about searched Pokemon after search with a pokeball loading animation
@@ -124,3 +136,10 @@ window.onload = function() {
   document.getElementById("pokemon-data").style.display = "none";
   document.getElementById("pokeball").style.display = "none";
 }
+
+//Feature to pick a random Pokemon when the random button is clicked
+
+document.getElementById("random-button").addEventListener("click", () => {
+  const randomId = Math.floor(Math.random() * 1010) + 1;
+  searchAndDisplayPokemon(randomId);
+})
